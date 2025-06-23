@@ -24,6 +24,9 @@ public class Calculator {
 			if (expStack.size() != 1) {
 				throw new IllegalStateException();
 			}
+		} catch (ArithmeticException ae) {
+			System.out.println(ae);
+			return Integer.MIN_VALUE;
 		} catch (Exception e) {
 			System.out.println("Error: Invalid postfix expression.");
 			return Integer.MIN_VALUE;
